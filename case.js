@@ -477,7 +477,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
     const baileysVersion = packageJson.dependencies['@fizzxydev/baileys-pro'] || packageJson.devDependencies['@fizzxydev/baileys-pro'];
     const botStatus = conn.public ? 'Public' : 'Self';
      let menu = `
-     halo kak ${pushname}
+     halo kak ${pushname}, aku ${namabot} ada bisa saya bantu
      
      *Versi:* 1.0
      *Nodejs:* ${nodeVersion}
@@ -867,9 +867,7 @@ if (isBan) return repfut(mess.ban)
 if (!m.quoted) return repfut('reply saluran channel nya lah')
 try {
 let id = (await m.getQuotedObj()).msg.contextInfo.forwardedNewsletterMessageInfo
-console.log(id)
 const channel = `Name: ${id.newsletterName}\nId: ${id.newsletterJid}\nMessageId: ${id.serverMessageId}`
-console.log(id)
 let textu7 = generateWAMessageFromContent(m.chat, {
           'viewOnceMessage': {
             'message': {
