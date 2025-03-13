@@ -1,0 +1,1 @@
+bot wa hasil copas 🗿
